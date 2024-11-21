@@ -45,7 +45,11 @@ The project demonstrates how topology control can improve wireless network effic
 ### Prerequisites
 
 - C++ Compiler (e.g., G++)
+<<<<<<< HEAD
 - Fast Light Toolkit (FLTK)
+=======
+- Fast Light ToolKit(FLTK)
+>>>>>>> 826ed002a09535b01140375611030d723016db26
 
 ### Installation
 
