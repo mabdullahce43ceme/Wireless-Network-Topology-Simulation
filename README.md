@@ -59,7 +59,7 @@ The project demonstrates how topology control can improve wireless network effic
 
 3. Compile the project:
    ```bash
-   g++ main.cpp -o wireless_network_simulations
+   g++ main.cpp -o wireless_network_simulation --std=c++11 -lfltk
 
 4. Run the executable:
    ```bash

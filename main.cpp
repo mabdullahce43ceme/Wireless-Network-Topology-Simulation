@@ -35,11 +35,11 @@ struct Node {
 
 class MyBox : public Fl_Box
 {
-    vector<pair<float, float>> nodes;
-    vector<vector<float>> adjacencyMatrix;
+    vector< pair<float, float> > nodes;
+    vector< vector<float> > adjacencyMatrix;
     float Size;
 public:
-    MyBox(int x, int y, int w, int h, const vector <pair<float, float>> & nodes, const vector<vector<float>> &adjacencyMatrix, float Size) : Fl_Box(x, y, w, h), nodes(nodes), Size(Size), adjacencyMatrix(adjacencyMatrix) {}
+    MyBox(int x, int y, int w, int h, const vector< pair<float, float> > & nodes, const vector< vector<float> > &adjacencyMatrix, float Size) : Fl_Box(x, y, w, h), nodes(nodes), Size(Size), adjacencyMatrix(adjacencyMatrix) {}
 
     void draw() override
     {
@@ -68,8 +68,8 @@ public:
 class MyGraph {
     int N;
     float size;
-    vector<pair<float, float>> vertices;
-    vector<vector<float>> adjacencyMatrix;
+    vector< pair<float, float> > vertices;
+    vector< vector<float> > adjacencyMatrix;
 
     float distance (pair<float, float> &a, pair<float, float> &b) {
         return sqrt((a.first - b.first)*(a.first - b.first) + (a.second - b.second)*(a.second - b.second));
@@ -108,7 +108,7 @@ class MyGraph {
         return make_pair(maxDegree, avgDegree);
     }
     void topologyControl () {
-        vector<vector<float>> _adjacencyMatrix = adjacencyMatrix;
+        vector< vector<float> > _adjacencyMatrix = adjacencyMatrix;
         for (unsigned i = 0; i < N; ++i)
         for (unsigned j = i + 1; j < N; ++j)
         if (adjacencyMatrix[i][j] != -1) {
